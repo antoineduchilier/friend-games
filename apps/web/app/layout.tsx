@@ -4,11 +4,32 @@ import './globals.css';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
+  variable: '--font-rubik-sans',
 });
+
 const geistMono = localFont({
   src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
+  variable: '--font-rubik-sans',
+});
+
+const RubikMedium = localFont({
+  src: './fonts/Rubik-Medium.ttf',
+  variable: '--font-rubik-medium',
+});
+
+const RubikExtraBold = localFont({
+  src: './fonts/Rubik-ExtraBold.ttf',
+  variable: '--font-rubik-extrabold',
+});
+
+const RubikBold = localFont({
+  src: './fonts/Rubik-Bold.ttf',
+  variable: '--font-rubik-bold',
+});
+
+const RubikSemiBold = localFont({
+  src: './fonts/Rubik-SemiBold.ttf',
+  variable: '--font-rubik-semibold',
 });
 
 export const metadata: Metadata = {
@@ -23,7 +44,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${RubikMedium.variable} ${RubikExtraBold.variable} ${RubikBold.variable} ${RubikSemiBold.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

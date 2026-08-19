@@ -1,0 +1,58 @@
+.homepage-card {
+  margin-bottom: 16px;
+}
+
+.homepage-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.homepage-card-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.homepage-background-card-icon {
+  background-color: var(--define-opacity-color);
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homepage-card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--define-color);
+}
+
+.homepage-game-title {
+  font-family: var(--font-rubik-bold);
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.homepage-game-subtitle {
+  font-size: 13px;
+}
+.homepage-card-players {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--define-color);
+  font-family: var(--font-rubik-semibold);
+}
+
+.homepage-arrow {
+  display: flex;
+  fill: var(--define-color);
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
