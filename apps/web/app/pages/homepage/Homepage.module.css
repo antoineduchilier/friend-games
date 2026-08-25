@@ -2,6 +2,9 @@
   min-height: 100vh;
   padding: 32px 20px;
   background: #f8f9fd;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
 }
 .homepage-logo-title {
   display: flex;
@@ -46,4 +49,9 @@
 }
 .homepage-game-subtitle {
   font-size: 13px;
+}
+.homepage-gamecard {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
 }

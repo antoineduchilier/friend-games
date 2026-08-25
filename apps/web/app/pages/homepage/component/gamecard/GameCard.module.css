@@ -1,11 +1,14 @@
-.homepage-card {
-  margin-bottom: 16px;
-}
-
 .homepage-card-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eef2ff;
+  background-color: var(--define-background-color);
+  padding: 20px;
 }
 
 .homepage-card-left {
@@ -34,12 +37,14 @@
 
 .homepage-game-title {
   font-family: var(--font-rubik-bold);
-  font-size: 18px;
+  color: var(--define-title-color);
+  font-size: 1.125em;
   display: flex;
   justify-content: space-between;
 }
 .homepage-game-subtitle {
-  font-size: 13px;
+  font-size: 0.813em;
+  color: var(--define-subtitle-color);
 }
 .homepage-card-players {
   display: flex;
@@ -50,9 +55,17 @@
 }
 
 .homepage-arrow {
-  display: flex;
+  position: absolute;
+  top: 20px;
+  right: 20px;
   fill: var(--define-color);
   cursor: pointer;
   width: 16px;
   height: 16px;
+}
+.homepage-card-dot-before-player {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background-color: var(--define-color);
 }
