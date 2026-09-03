@@ -1,3 +1,7 @@
-const Toto = () => <a href="/darts">Go to darts</a>;
+import { redirect } from 'next/navigation';
 
-export default Toto;
+const FirstPage = () => {
+  redirect('/homepage');
+};
+
+export default FirstPage;

@@ -1,0 +1,135 @@
+.homepage-button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
+}
+.homepage-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  border-radius: 24px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eef2ff;
+  background-color: '#FFFFFF';
+  padding: 20px;
+  box-shadow: 0px 8px 24px rgba(78, 70, 229, 0.039);
+}
+
+.homepage-card-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.homepage-background-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homepage-card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-game-title {
+  font-family: var(--font-rubik-bold);
+  font-size: 1.125em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.homepage-game-subtitle {
+  font-size: 0.813em;
+}
+
+.homepage-card-players {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-rubik-semibold);
+}
+
+.homepage-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.homepage-card-dot-before-player {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+}
+
+.darts {
+  .homepage-card-players {
+    color: var(--color-primary);
+  }
+  .homepage-arrow {
+    fill: var(--color-primary);
+  }
+  .homepage-card-icon {
+    fill: var(--color-primary);
+  }
+  .homepage-card-dot-before-player {
+    background-color: var(--color-primary);
+  }
+  .homepage-background-card-icon {
+    background-color: var(--color-primary10);
+  }
+}
+
+.belote {
+  .homepage-card-players {
+    color: var(--color-secondary);
+  }
+  .homepage-arrow {
+    fill: var(--color-secondary);
+  }
+  .homepage-card-icon {
+    fill: var(--color-secondary);
+  }
+  .homepage-card-dot-before-player {
+    background-color: var(--color-secondary);
+  }
+  .homepage-background-card-icon {
+    background-color: var(--color-secondary10);
+  }
+}
+
+.disabled {
+  .homepage-card-players {
+    color: #9ca3af;
+  }
+  .homepage-arrow {
+    fill: #9ca3af;
+  }
+  .homepage-card-icon {
+    fill: #9ca3af;
+  }
+  .homepage-card-dot-before-player {
+    background-color: #9ca3af;
+  }
+  .homepage-background-card-icon {
+    background-color: #e5e7eb;
+  }
+  .homepage-card-content {
+    background-color: #e5e7eb;
+  }
+}
