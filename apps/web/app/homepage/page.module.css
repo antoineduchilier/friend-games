@@ -23,6 +23,22 @@
   color: #1f2937;
   font-family: var(--font-rubik-extrabold);
 }
+.homepage-settings-logo {
+  width: 18px;
+  height: 18px;
+  fill: #0f172a;
+}
+.homepage-background-settings-logo {
+  background-color: #f8fafc;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  cursor: pointer;
+}
 .homepage-content-subtitle {
   color: #667085;
   font-size: 12px;

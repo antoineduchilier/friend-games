@@ -1,4 +1,7 @@
+'use client';
+import { useRouter } from 'next/navigation';
 import CrossIcon from '../../public/images/CrossIcon';
+import SettingsIcon from '../../public/images/settingsIcon';
 import TargetIcon from '../../public/images/targetIcon';
 import TrophyIcon from '../../public/images/trophyIcon';
 import GameCard from '../components/gamecard/GameCard';
@@ -26,6 +29,12 @@ const Homepage = () => {
     },
   ];
 
+  const router = useRouter();
+
+  const openSettings = () => {
+    router.push('/settings');
+  };
+
   return (
     <div className={styles['homepage']}>
       <div className={styles['homepage-logo-title']}>
@@ -33,6 +42,9 @@ const Homepage = () => {
         <div>
           <h3 className={styles['homepage-title']}>GameScore</h3>
           <p className={styles['homepage-content-subtitle']}>Compteur de points modernes</p>
+        </div>
+        <div className={styles['homepage-background-settings-logo']}>
+          <SettingsIcon className={styles['homepage-settings-logo']} onClick={openSettings} />
         </div>
       </div>
       <div className={styles['homepage-content-newgame']}>
