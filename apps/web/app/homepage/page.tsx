@@ -33,10 +33,10 @@ const Homepage = () => {
 
   const languageButtonText = () => {
     if (i18n.language === 'fr') {
-      return '🇬🇧 English';
+      return 'passage vers 🇬🇧 Anglais';
     }
 
-    return '🇫🇷 Français';
+    return 'go to 🇫🇷 French';
   };
 
   const games: GameCardType[] = [
