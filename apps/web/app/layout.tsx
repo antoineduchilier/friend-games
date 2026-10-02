@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import Providers from '../app/provider';
 import './globals.css';
 
 const geistSans = localFont({
@@ -47,7 +48,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${RubikMedium.variable} ${RubikExtraBold.variable} ${RubikBold.variable} ${RubikSemiBold.variable}`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
