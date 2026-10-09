@@ -1,0 +1,23 @@
+{
+  "homepage": {
+    "title": "GameScore",
+    "subtitle": "Compteur de points modernes",
+    "newgame": {
+      "title": "Lancez une nouvelle ",
+      "title-2": "partie",
+      "subtitle": "Sélectionnez votre jeu pour commencer la partie"
+    },
+    "cards": {
+      "card-0": {
+        "title": "Flechettes",
+        "description": "301, 501, Cricket. Visez le centre !",
+        "details": "2-8 joueurs"
+      },
+      "card-1": {
+        "title": "Belote",
+        "description": "Annonces, capots et belote-rebelote",
+        "details": "2 ou 4 joueurs (équipes)"
+      }
+    }
+  }
+}

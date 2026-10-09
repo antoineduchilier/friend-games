@@ -1,0 +1,23 @@
+{
+  "homepage": {
+    "title": "GameScore",
+    "subtitle": "Modern score counter",
+    "newgame": {
+      "title": "Start a new ",
+      "title-2": "game",
+      "subtitle": "Select your game to start"
+    },
+    "cards": {
+      "card-0": {
+        "title": "Darts",
+        "description": "301, 501, Cricket. Aim for the center !",
+        "details": "2-8 players"
+      },
+      "card-1": {
+        "title": "Belote",
+        "description": "Declarations, capot, and belote-rebelote",
+        "details": "2 or 4 players (teams)"
+      }
+    }
+  }
+}
