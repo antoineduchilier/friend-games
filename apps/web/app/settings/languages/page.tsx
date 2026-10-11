@@ -18,6 +18,10 @@ const Languages = () => {
     router.back();
   };
 
+  const filteredLanguages = languages.filter((language) =>
+    language.label.toLowerCase().includes(search.toLowerCase()),
+  );
+
   useEffect(() => {
     const savedLanguage = localStorage.getItem('selectedLanguage');
 
@@ -33,10 +37,6 @@ const Languages = () => {
 
     localStorage.setItem('selectedLanguage', selectedLanguage);
   }, [selectedLanguage, initialized]);
-
-  const filteredLanguages = languages.filter((language) =>
-    language.label.toLowerCase().includes(search.toLowerCase()),
-  );
 
   return (
     <div className={styles['language']}>

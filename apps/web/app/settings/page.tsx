@@ -16,27 +16,13 @@ const SettingsPage = () => {
   const router = useRouter();
   const [currentLanguage, setCurrentLanguage] = useState('fr');
 
-  const loadLanguage = () => {
-    const savedLanguage = localStorage.getItem('selectedLanguage');
-    if (savedLanguage) {
-      setCurrentLanguage(savedLanguage);
-    }
-  };
-  useEffect(() => {
-    loadLanguage();
-  }, []);
-
   const { watch, setValue } = useForm<SettingsForm>({
     defaultValues: {
       language: 'fr',
     },
   });
-  useEffect(() => {
-    const savedLanguage = localStorage.getItem('selectedLanguage');
-    if (savedLanguage) {
-      setValue('language', savedLanguage);
-    }
-  }, [setValue]);
+
+  const selected = languages.find((option) => option.value === watch('language'));
 
   const goToLanguageChoice = () => {
     router.push('/settings/languages');
@@ -46,7 +32,23 @@ const SettingsPage = () => {
     router.back();
   };
 
-  const selected = languages.find((option) => option.value === watch('language'));
+  const loadLanguage = () => {
+    const savedLanguage = localStorage.getItem('selectedLanguage');
+    if (savedLanguage) {
+      setCurrentLanguage(savedLanguage);
+    }
+  };
+
+  useEffect(() => {
+    loadLanguage();
+  }, []);
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('selectedLanguage');
+    if (savedLanguage) {
+      setValue('language', savedLanguage);
+    }
+  }, [setValue]);
 
   return (
     <div className={styles['settings']}>
