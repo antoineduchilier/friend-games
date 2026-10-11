@@ -71,6 +71,17 @@
   & > div:last-child {
     border-bottom: 0;
   }
+  p {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    text-align: center;
+    color: black;
+    width: 100%;
+    height: 64px;
+    font-family: var(--font-rubik-medium);
+    font-size: 15px;
+  }
 }
 
 .language-lign {

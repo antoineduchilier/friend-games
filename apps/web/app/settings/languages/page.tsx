@@ -56,6 +56,7 @@ const Languages = () => {
         />
       </div>
       <div className={styles['language-list']}>
+        {filteredLanguages.length === 0 && <p>Aucune langue trouvée</p>}
         {filteredLanguages.map((language) => (
           <div
             key={language.value}
