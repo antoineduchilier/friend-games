@@ -39,21 +39,19 @@ const Homepage = () => {
     <div className={styles['homepage']}>
       <div className={styles['homepage-logo-title']}>
         <TrophyIcon className={styles['homepage-logo']} />
-        <div>
-          <h3 className={styles['homepage-title']}>GameScore</h3>
-          <p className={styles['homepage-content-subtitle']}>Compteur de points modernes</p>
+        <div className={styles['homepage-title']}>
+          <h3>GameScore</h3>
+          <p>Compteur de points modernes</p>
         </div>
-        <div className={styles['homepage-background-settings-logo']}>
-          <SettingsIcon className={styles['homepage-settings-logo']} onClick={openSettings} />
+        <div className={styles['homepage-background-settings-logo']} onClick={openSettings}>
+          <SettingsIcon className={styles['homepage-settings-logo']} />
         </div>
       </div>
-      <div className={styles['homepage-content-newgame']}>
-        <h1 className={styles['homepage-newgame-title']}>
-          Lancez une nouvelle <span className={styles['homepage-title-part']}>partie</span>
+      <div className={styles['homepage-newgame']}>
+        <h1>
+          Lancez une nouvelle <span>partie</span>
         </h1>
-        <p className={styles['homepage-newgame-subtitle']}>
-          Sélectionnez votre jeu pour commencer la partie
-        </p>
+        <p>Sélectionnez votre jeu pour commencer la partie</p>
       </div>
       <div className={styles['homepage-gamecard']}>
         {games.map((game) => (

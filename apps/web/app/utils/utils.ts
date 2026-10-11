@@ -1,4 +1,4 @@
-export const language = {
+export const keysTranslationSvg = {
   fr: 'fi-fr',
   en: 'fi-gb',
 };
@@ -7,11 +7,11 @@ export const languages = [
   {
     value: 'fr',
     label: 'Français',
-    flag: language.fr,
+    flag: keysTranslationSvg.fr,
   },
   {
     value: 'en',
     label: 'Anglais',
-    flag: language.en,
+    flag: keysTranslationSvg.en,
   },
 ];

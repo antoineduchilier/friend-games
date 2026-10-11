@@ -44,22 +44,17 @@ const Languages = () => {
         <div className={styles['background-angle-left-icon']} onClick={leaveLanguage}>
           <AngleLeft className={styles['angle-left-icon']} />
         </div>
-
-        <h2 className={styles['language-title']}>Langue</h2>
+        <h2>Langue</h2>
       </div>
-
       <div className={styles['choose-language']}>
-        <h2 className={styles['select-language-title']}>Sélectionnez votre langue</h2>
-
+        <h2>Sélectionnez votre langue</h2>
         <input
           type="search"
-          className={styles['input-language']}
           placeholder="Rechercher une langue..."
           value={search}
           onChange={(event) => setSearch(event.target.value)}
         />
       </div>
-
       <div className={styles['language-list']}>
         {filteredLanguages.map((language) => (
           <div
@@ -71,7 +66,6 @@ const Languages = () => {
               <span className={`fi ${language.flag}`} />
               {language.label}
             </div>
-
             <Checkbox
               checked={selectedLanguage === language.value}
               className={styles['checkbox']}

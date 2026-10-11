@@ -54,15 +54,14 @@ const SettingsPage = () => {
         <div className={styles['background-angle-left-icon']} onClick={leaveSettings}>
           <AngleLeft className={styles['angle-left-icon']} />
         </div>
-        <h2 className={styles['settings-title']}>Réglages</h2>
+        <h2>Réglages</h2>
       </div>
       <div className={styles['settings-language']}>
-        <h2 className={styles['settings-language-title']}>LANGUE</h2>
+        <h2>LANGUE</h2>
         <button
           type="button"
           onClick={goToLanguageChoice}
           onChange={(_value) => setValue('language', watch('language'))}
-          className={styles['select-button']}
         >
           <span className={`fi ${selected?.flag}`} />
           {selected?.label}
