@@ -2,7 +2,7 @@
 
 import { Checkbox } from 'antd';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import AngleLeft from '../../../public/images/angleLeft';
 import { languages } from '../../utils/utils';
 import styles from './page.module.css';
@@ -10,7 +10,6 @@ import styles from './page.module.css';
 const Languages = () => {
   const [search, setSearch] = useState('');
   const [selectedLanguage, setSelectedLanguage] = useState('');
-  const [initialized, setInitialized] = useState(false);
 
   const router = useRouter();
 
@@ -18,8 +17,10 @@ const Languages = () => {
     router.back();
   };
 
-  const filteredLanguages = languages.filter((language) =>
-    language.label.toLowerCase().includes(search.toLowerCase()),
+  const filteredLanguages = useMemo(
+    () =>
+      languages.filter((language) => language.label.toLowerCase().includes(search.toLowerCase())),
+    [languages, search],
   );
 
   useEffect(() => {
@@ -28,15 +29,11 @@ const Languages = () => {
     if (savedLanguage) {
       setSelectedLanguage(savedLanguage);
     }
-
-    setInitialized(true);
   }, []);
 
   useEffect(() => {
-    if (!initialized || !selectedLanguage) return;
-
     localStorage.setItem('selectedLanguage', selectedLanguage);
-  }, [selectedLanguage, initialized]);
+  }, [selectedLanguage]);
 
   return (
     <div className={styles['language']}>

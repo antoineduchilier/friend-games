@@ -1,7 +1,7 @@
 'use client';
 import 'flag-icons/css/flag-icons.min.css';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import AngleLeft from '../../public/images/angleLeft';
 import AngleRight from '../../public/images/angleRight';
@@ -14,7 +14,6 @@ type SettingsForm = {
 
 const SettingsPage = () => {
   const router = useRouter();
-  const [currentLanguage, setCurrentLanguage] = useState('fr');
 
   const { watch, setValue } = useForm<SettingsForm>({
     defaultValues: {
@@ -22,7 +21,12 @@ const SettingsPage = () => {
     },
   });
 
-  const selected = languages.find((option) => option.value === watch('language'));
+  const currentLanguage = watch('language');
+
+  const selected = useMemo(
+    () => languages.find((option) => option.value === currentLanguage),
+    [languages.length, currentLanguage],
+  );
 
   const goToLanguageChoice = () => {
     router.push('/settings/languages');
@@ -33,10 +37,7 @@ const SettingsPage = () => {
   };
 
   const loadLanguage = () => {
-    const savedLanguage = localStorage.getItem('selectedLanguage');
-    if (savedLanguage) {
-      setCurrentLanguage(savedLanguage);
-    }
+    localStorage.getItem('selectedLanguage');
   };
 
   useEffect(() => {
@@ -63,7 +64,7 @@ const SettingsPage = () => {
         <button
           type="button"
           onClick={goToLanguageChoice}
-          onChange={(_value) => setValue('language', watch('language'))}
+          onChange={(_value) => setValue('language', currentLanguage)}
         >
           <span className={`fi ${selected?.flag}`} />
           {selected?.label}
