@@ -5,7 +5,7 @@ import { useEffect, useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 import AngleLeft from '../../public/images/angleLeft';
 import AngleRight from '../../public/images/angleRight';
-import { languages } from '../utils/utils';
+import { keysTranslationSvg, languages } from '../utils/utils';
 import styles from './page.module.css';
 
 type SettingsForm = {
@@ -36,14 +36,6 @@ const SettingsPage = () => {
     router.back();
   };
 
-  const loadLanguage = () => {
-    localStorage.getItem('selectedLanguage');
-  };
-
-  useEffect(() => {
-    loadLanguage();
-  }, []);
-
   useEffect(() => {
     const savedLanguage = localStorage.getItem('selectedLanguage');
     if (savedLanguage) {
@@ -66,7 +58,7 @@ const SettingsPage = () => {
           onClick={goToLanguageChoice}
           onChange={(_value) => setValue('language', currentLanguage)}
         >
-          <span className={`fi ${selected?.flag}`} />
+          <span className={`fi ${keysTranslationSvg[selected?.value ?? 'fr']}`} />
           {selected?.label}
           <AngleRight className={styles['angle-right-icon']} />
         </button>

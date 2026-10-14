@@ -4,7 +4,7 @@ import { Checkbox } from 'antd';
 import { useRouter } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
 import AngleLeft from '../../../public/images/angleLeft';
-import { languages } from '../../utils/utils';
+import { keysTranslationSvg, languages } from '../../utils/utils';
 import styles from './page.module.css';
 
 const Languages = () => {
@@ -61,7 +61,7 @@ const Languages = () => {
             className={styles['language-lign']}
           >
             <div className={styles['language-info']}>
-              <span className={`fi ${language.flag}`} />
+              <span className={`fi ${keysTranslationSvg[language.value]}`} />
               {language.label}
             </div>
             <Checkbox
