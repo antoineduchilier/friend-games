@@ -9,14 +9,15 @@
 .homepage-logo-title {
   display: flex;
   gap: 12px;
+  svg {
+    display: flex;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    fill: var(--color-primary);
+  }
 }
-.homepage-logo {
-  display: flex;
-  align-self: center;
-  width: 40px;
-  height: 40px;
-  fill: var(--color-primary);
-}
+
 .homepage-title {
   h3 {
     margin: 0;
@@ -30,13 +31,9 @@
     font-family: var(--font-rubik-medium);
   }
 }
-.homepage-settings-logo {
-  width: 18px;
-  height: 18px;
-  fill: #0f172a;
-}
+
 .homepage-background-settings-logo {
-  background-color: #f8fafc;
+  background-color: white;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -45,6 +42,11 @@
   height: 40px;
   margin-left: auto;
   cursor: pointer;
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: #2a0f0f;
+  }
 }
 
 .homepage-newgame {

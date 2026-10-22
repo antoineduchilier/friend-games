@@ -14,13 +14,11 @@ type SettingsForm = {
 
 const SettingsPage = () => {
   const router = useRouter();
-
   const { watch, setValue } = useForm<SettingsForm>({
     defaultValues: {
       language: 'fr',
     },
   });
-
   const currentLanguage = watch('language');
 
   const selected = useMemo(
@@ -47,7 +45,7 @@ const SettingsPage = () => {
     <div className={styles['settings']}>
       <div className={styles['settings-title-bar']}>
         <div className={styles['background-angle-left-icon']} onClick={leaveSettings}>
-          <AngleLeft className={styles['angle-left-icon']} />
+          <AngleLeft />
         </div>
         <h2>Réglages</h2>
       </div>
@@ -60,7 +58,7 @@ const SettingsPage = () => {
         >
           <span className={`fi ${keysTranslationSvg[selected?.value ?? 'fr']}`} />
           {selected?.label}
-          <AngleRight className={styles['angle-right-icon']} />
+          <AngleRight />
         </button>
       </div>
     </div>

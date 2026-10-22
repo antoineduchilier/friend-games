@@ -28,11 +28,10 @@
   justify-content: center;
   position: absolute;
   cursor: pointer;
-}
-
-.angle-left-icon {
-  width: 16px;
-  height: 16px;
+  svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .choose-language {

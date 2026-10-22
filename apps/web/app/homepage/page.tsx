@@ -38,13 +38,13 @@ const Homepage = () => {
   return (
     <div className={styles['homepage']}>
       <div className={styles['homepage-logo-title']}>
-        <TrophyIcon className={styles['homepage-logo']} />
+        <TrophyIcon />
         <div className={styles['homepage-title']}>
           <h3>GameScore</h3>
           <p>Compteur de points modernes</p>
         </div>
         <div className={styles['homepage-background-settings-logo']} onClick={openSettings}>
-          <SettingsIcon className={styles['homepage-settings-logo']} />
+          <SettingsIcon />
         </div>
       </div>
       <div className={styles['homepage-newgame']}>

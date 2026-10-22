@@ -28,11 +28,10 @@
   justify-content: center;
   position: absolute;
   cursor: pointer;
-}
-
-.angle-left-icon {
-  width: 16px;
-  height: 16px;
+  svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .settings-language {
@@ -61,12 +60,11 @@
     cursor: pointer;
     text-align: left;
     position: relative;
+    svg {
+      width: 16px;
+      height: 16px;
+      right: 16px;
+      position: absolute;
+    }
   }
-}
-
-.angle-right-icon {
-  width: 16px;
-  height: 16px;
-  right: 16px;
-  position: absolute;
 }

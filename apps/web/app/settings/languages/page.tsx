@@ -39,7 +39,7 @@ const Languages = () => {
     <div className={styles['language']}>
       <div className={styles['language-title-bar']}>
         <div className={styles['background-angle-left-icon']} onClick={leaveLanguage}>
-          <AngleLeft className={styles['angle-left-icon']} />
+          <AngleLeft />
         </div>
         <h2>Langue</h2>
       </div>
@@ -52,8 +52,8 @@ const Languages = () => {
           onChange={(event) => setSearch(event.target.value)}
         />
       </div>
+      {filteredLanguages.length === 0 && <p>Aucune langue trouvée</p>}
       <div className={styles['language-list']}>
-        {filteredLanguages.length === 0 && <p>Aucune langue trouvée</p>}
         {filteredLanguages.map((language) => (
           <div
             key={language.value}
