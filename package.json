@@ -24,6 +24,8 @@
   "dependencies": {
     "@ant-design/icons": "^6.3.2",
     "antd": "^6.5.1",
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "flag-icons": "^7.5.0",
+    "react-hook-form": "^7.88.0"
   }
 }

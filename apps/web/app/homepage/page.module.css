@@ -9,44 +9,58 @@
 .homepage-logo-title {
   display: flex;
   gap: 12px;
-}
-.homepage-logo {
-  display: flex;
-  align-self: center;
-  width: 40px;
-  height: 40px;
-  fill: var(--color-primary);
-}
-.homepage-title {
-  margin: 0;
-  font-size: 20px;
-  color: #1f2937;
-  font-family: var(--font-rubik-extrabold);
-}
-.homepage-content-subtitle {
-  color: #667085;
-  font-size: 12px;
-  font-family: var(--font-rubik-medium);
-}
-.homepage-newgame-title {
-  font-size: 24px;
-}
-.homepage-newgame-subtitle {
-  font-size: 14px;
-}
-.homepage-title-part {
-  color: var(--color-primary);
+  svg {
+    display: flex;
+    align-self: center;
+    width: 40px;
+    height: 40px;
+    fill: var(--color-primary);
+  }
 }
 
-.homepage-game-title {
-  font-family: var(--font-rubik-bold);
-  font-size: 18px;
+.homepage-title {
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #1f2937;
+    font-family: var(--font-rubik-extrabold);
+  }
+  p {
+    color: #667085;
+    font-size: 12px;
+    font-family: var(--font-rubik-medium);
+  }
+}
+
+.homepage-background-settings-logo {
+  background-color: white;
+  border-radius: 20px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  cursor: pointer;
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: #2a0f0f;
+  }
 }
-.homepage-game-subtitle {
-  font-size: 13px;
+
+.homepage-newgame {
+  h1 {
+    font-size: 24px;
+  }
+  span {
+    color: var(--color-primary);
+  }
+  p {
+    font-size: 14px;
+  }
 }
+
 .homepage-gamecard {
   display: flex;
   gap: 16px;
